@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASP_FinalExam_Net6.Data;
 using ASP_FinalExam_Net6.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_FinalExam_Net6.Controllers
 {
@@ -19,6 +20,7 @@ namespace ASP_FinalExam_Net6.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Employees
         public async Task<IActionResult> Index()
         {

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASP_FinalExam_Net6.Data;
 using ASP_FinalExam_Net6.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP_FinalExam_Net6.Controllers
 {
@@ -45,6 +46,7 @@ namespace ASP_FinalExam_Net6.Controllers
             return View(department);
         }
 
+        [Authorize]
         // GET: Departments/Create
         public IActionResult Create()
         {
@@ -69,6 +71,7 @@ namespace ASP_FinalExam_Net6.Controllers
             return View(department);
         }
 
+        [Authorize]
         // GET: Departments/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
